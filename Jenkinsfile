@@ -11,15 +11,14 @@ pipeline {
         DOCKERHUB_REPO = 'amirnoori1/calculator_app'
         DOCKER_IMAGE_TAG = 'latest'
     }
-gi
-    stages {
-            stage('Check Docker') {
-                steps {
-                    bat 'docker --version'
-                }
-            }
 
     stages {
+
+        stage('Check Docker') {
+            steps {
+                bat 'docker --version'
+            }
+        }
 
         stage('Checkout') {
             steps {
