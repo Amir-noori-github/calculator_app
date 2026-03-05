@@ -1,4 +1,4 @@
-package claculator;
+package calculator;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

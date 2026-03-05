@@ -1,4 +1,4 @@
-package claculator;
+package calculator;
 
 import java.sql.*;
 
@@ -37,7 +37,7 @@ public class ResultService {
 
             // Create table with new columns
             String createTable = """
-                CREATE TABLE IF NOT EXISTS calc_results (
+                CREATE TABLE IF NOT EXISTS calculator_results (
                     id INT AUTO_INCREMENT PRIMARY KEY,
                     number1 DOUBLE NOT NULL,
                     number2 DOUBLE NOT NULL,
@@ -52,7 +52,7 @@ public class ResultService {
 
             // Insert the result
             String insert = """
-                INSERT INTO calc_results 
+                INSERT INTO calculator_results 
                 (number1, number2, sum_result, product_result, subtract_result, division_result)
                 VALUES (?, ?, ?, ?, ?, ?)
                 """;
