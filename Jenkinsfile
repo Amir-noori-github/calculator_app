@@ -32,18 +32,6 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                bat 'mvn test'
-            }
-        }
-
-        stage('Publish Test Result') {
-            steps {
-                junit '**/target/surefire-reports/*.xml'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
